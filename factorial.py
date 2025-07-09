@@ -7,6 +7,16 @@ def factorial(n):
         result *= i
     return result
 
+def fibonacci_series(n):
+    """Return a list containing the Fibonacci series up to n terms."""
+    series = []
+    a, b = 0, 1
+    for _ in range(n):
+        series.append(a)
+        a, b = b, a + b
+    return series
+
 if __name__ == "__main__":
     num = int(input("Enter a number: "))
     print(f"Factorial of {num} is {factorial(num)}")
+    print(f"Fibonacci series up to {num} terms is {fibonacci_series(num)}")
